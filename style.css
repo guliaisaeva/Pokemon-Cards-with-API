@@ -26,6 +26,12 @@ text-align: center;
 font-weight: 900;
 margin-top: 2rem;
 }
+h1:hover{
+    /* animation: shake 0.5s; */
+   background-color: rgb(1, 17, 17);
+   border-radius: 1rem;
+   color: #fff;
+}
 /* searchbar style */
 form{
     display: flex;
@@ -74,6 +80,27 @@ main{
     padding: 20px;
     text-align: center;
 }
+.pokemon:hover{
+animation: shake 0.5s;
+}
+/* animation to shake a pokemon container */
+@keyframes shake{
+    0%{
+        transform:rotate(0deg);
+    }
+    25%{
+        transform:rotate(5deg);
+    }
+    50%{
+        transform:rotate(0deg);
+    }
+    75%
+        { transform:rotate(-5deg);
+        }
+    100%{
+        transform:rotate(0deg);
+    }
+}
 .pokemon .img-container{
 background-color: rgba(255,255,255,0.6);
 border-radius: 50%;
@@ -84,6 +111,9 @@ text-align: center;
 .pokemon .img-container img{
     max-width: 90%;
     margin-top: 20px;
+}
+.pokemon .img-container img:hover{
+    transform: scale(1.2);
 }
 .pokemon .info{
     margin-top: 20px;
@@ -97,4 +127,8 @@ font-size: 0.8em;
 .pokemon .info .name{
     margin: 15px 0 7px;
     letter-spacing: 1px;
+}
+.pokemon .info .name:hover{
+    color: red;
+    font-weight: bold;
 }
