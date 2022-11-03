@@ -1,5 +1,7 @@
 // js variables
-const poke_container=document.getElementById('pokemon-container')
+const searchInput=document.querySelector("#poke-input");
+const searchBtn=document.querySelector(".btn-search");
+const poke_container=document.getElementById('pokemon-container');
 const pokemon_count=150
 const colors={
     fire:"#FDDFDF",
@@ -55,8 +57,6 @@ const color=colors[type]
 pokemonEl.style.backgroundColor=color;
 
 
-
-
 const pokemonInnerHTML=`
 <div class="img-container">
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="charizard">
@@ -70,3 +70,7 @@ const pokemonInnerHTML=`
 pokemonEl.innerHTML=pokemonInnerHTML;
 poke_container.appendChild(pokemonEl);
 }
+
+//search functionality
+
+searchInput.addEventListener("input")
