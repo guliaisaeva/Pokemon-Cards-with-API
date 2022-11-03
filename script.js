@@ -73,4 +73,14 @@ poke_container.appendChild(pokemonEl);
 
 //search functionality
 
-searchInput.addEventListener("input")
+searchInput.addEventListener("input",function(e){
+    const pokemonNames=document.querySelectorAll(".name");
+    console.log(pokemonNames)
+    const search=searchInput.value.toLowerCase();
+    pokemonNames.forEach((pokeName)=>{
+        pokeName.parentElement.parentElement.style.display="block";
+        if(!pokeName.innerHTML.toLowerCase().includes(search)){
+            pokeName.parentElement.parentElement.style.display="none";
+        }
+    })
+})
